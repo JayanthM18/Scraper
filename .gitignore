@@ -1,18 +1,23 @@
-# Virtual environment
-.venv/
-
-# Python cache
-__pycache__/
-*.pyc
-
-# VS Codium / VS Code settings
-.vscode/
-
-# Logs
-logs/
-
-# Environment variables
+# Sensitive - never commit
+cookies.json
+*.cookies.json
 .env
 
-# Scraped output
+# Generated data / runtime
 output/
+logs/
+tweets.csv
+*.csv
+
+# Editor cruft
+tempCodeRunnerFile.py
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+
+# Playwright
+playwright-report/
+test-results/
