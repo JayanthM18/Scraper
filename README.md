@@ -21,7 +21,7 @@ Supports two modes:
 ## Setup
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/JayanthM18/Twitter_scraper
 cd twitter-scraping
 python3 -m venv .venv
 source .venv/bin/activate       # Windows: .venv\Scripts\activate
@@ -35,7 +35,7 @@ playwright install chromium
 2. Export your cookies as JSON using a browser extension such as [Cookie-Editor](https://cookie-editor.com/).
 3. Save the exported file as `cookies.json` in the project root.
 
-See `cookies.example.json` for the expected format. **Never commit your real `cookies.json` — it contains live authentication tokens for your account.**
+See `cookies.example.json` for the expected format. **Never share your real `cookies.json` — it contains live authentication tokens for your account.**
 
 ## Usage
 
@@ -55,11 +55,9 @@ Output is written as a CSV with columns: `id, screen_name, created_at, text, rep
 ## Project structure
 
 ```
-main.py       # CLI entry point
-scraper.py    # Playwright browser automation and GraphQL interception
-parser.py     # Extracts tweet objects from raw GraphQL JSON
-models.py     # Data structures for tweets/results
-utils.py      # Shared helpers (cookie loading, CSV export, etc.)
+main.py             # everything: cookie loading, GraphQL interception, scraping, CSV export
+requirements.txt    # dependencies (just Playwright)
+cookies.example.json  # template showing the expected cookie format
 ```
 
 ## Notes and limitations
