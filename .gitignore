@@ -1,0 +1,18 @@
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# VS Codium / VS Code settings
+.vscode/
+
+# Logs
+logs/
+
+# Environment variables
+.env
+
+# Scraped output
+output/
