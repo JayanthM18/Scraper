@@ -39,18 +39,25 @@ See `cookies.example.json` for the expected format. **Never share your real `coo
 
 ## Usage
 
-```bash
-# Scrape a user's profile
-python main.py profile --target elonmusk --limit 50 --cookies cookies.json --out tweets.csv
+Open `main.py` and edit the config block near the top:
 
-# Scrape search results
-python main.py search --target "openai lang:en" --limit 100 --cookies cookies.json --out tweets.csv
+```python
+MODE = "profile"          # "profile" (a user's timeline) or "search" (a query)
+TARGET = "elonmusk"       # username for profile mode, or search text for search mode
+LIMIT = 50                # how many tweets to collect
+COOKIES_PATH = "cookies.json"
+OUT_PATH = "tweets.csv"
+HEADFUL = False            # True = show the browser window while it runs (useful for debugging)
 ```
 
-Optional flags:
-- `--headful` — show the browser window while it runs (useful for debugging or solving a captcha the first time)
+Then run:
+
+```bash
+python main.py
+```
 
 Output is written as a CSV with columns: `id, screen_name, created_at, text, reply_count, retweet_count, like_count, quote_count`.
+
 
 ## Project structure
 
