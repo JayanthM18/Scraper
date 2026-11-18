@@ -1,6 +1,6 @@
-# Twitter/X Scraper
+# Scraper
 
-A lightweight scraper for X (Twitter) built with [Playwright](https://playwright.dev/). Instead of parsing the rendered page (whose CSS classes are obfuscated and change constantly), it intercepts X's own internal GraphQL API responses as the page loads and scrolls, and extracts tweet data directly from that JSON.
+A lightweight scraper built with [Playwright](https://playwright.dev/). Instead of parsing the rendered page (whose CSS classes are obfuscated and change constantly), it intercepts X's own internal GraphQL API responses as the page loads and scrolls, and extracts tweet data directly from that JSON.
 
 Supports two modes:
 - **Profile** — scrape a user's timeline
